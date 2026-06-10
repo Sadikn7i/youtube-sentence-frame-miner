@@ -16,7 +16,7 @@ from PIL import Image
 import pytesseract
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
-VIDEO_URL   = "https://www.youtube.com/watch?v=oBTmsQdulCE"
+VIDEO_URL   = ""  # paste your YouTube URL here
 VIDEO_FILE  = "jlpt_video.f136.mp4"
 OUTPUT_DIR  = "jlpt_frames"
 RESULT_TXT  = "sentences_clean.txt"
@@ -26,8 +26,7 @@ LANGUAGE    = "jpn+eng"
 # ─────────────────────────────────────────────────────────────────────────────
 
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-FFMPEG = r"C:\Users\dirir\Downloads\ffmpeg\ffmpeg-8.1.1-essentials_build\bin\ffmpeg.exe"
-
+FFMPEG = r"C:\path\to\ffmpeg\bin\ffmpeg.exe"  # update this to your ffmpeg path
 def extract_frames():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     existing = [f for f in os.listdir(OUTPUT_DIR) if f.endswith(".png")]
