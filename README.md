@@ -1,4 +1,4 @@
-
+# JLPT Video Sentence Extractor
 
 A Python pipeline that extracts Japanese sentences from silent JLPT quiz videos and outputs clean Anki-ready flashcards.
 
